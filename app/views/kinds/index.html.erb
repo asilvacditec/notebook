@@ -1,0 +1,39 @@
+<%= render 'top' %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listagem de Tipos</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kinds.each do |kind| %>
+      <tr>
+        <td><%= kind.description %></td>
+        <td><%= link_to 'Mostra', kind %></td>
+        <td><%= link_to 'Edita', edit_kind_path(kind) %></td>
+        <td><%= link_to 'Apaga', kind, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Tipo', new_kind_path %>
+
+<br>
+<br>
+
+
+<%= link_to 'Voltar ao inicio', root_path %>
+
+<%= render 'bottom' %>

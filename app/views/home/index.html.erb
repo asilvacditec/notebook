@@ -1,0 +1,27 @@
+<%= render 'top' %>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    --border: 1px solid #dddddd;
+    text-align: center;
+    padding: 18px;
+}
+
+--tr:nth-child(even) {
+--    background-color: #dddddd;
+}
+</style>
+
+<table>
+    <tr><td><%= link_to "Cadastro de Contatos", contacts_path, class: "button" %></td></tr>
+    <tr><td><%= link_to "Cadastro de Tipos de Contatos", kinds_path, class: "button" %></td></tr>
+    <tr><td><%= link_to "Cadastro de Endereços", addresses_path, class: "button" %></td></tr>
+    <tr><td><%= link_to "Cadastro de Telefones", phones_path, class: "button" %></td></tr>
+</table>
+<%= render 'bottom' %>
